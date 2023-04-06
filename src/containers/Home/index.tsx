@@ -1,5 +1,4 @@
-
-import Text from '../../components/Text'
+import { Text } from '../../components'
 import Header from './Header'
 import { Container } from './styles'
 

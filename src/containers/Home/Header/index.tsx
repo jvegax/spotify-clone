@@ -1,5 +1,5 @@
-import styled from 'styled-components/native';
-import Text from '../../../components/Text';
+import { Text } from '../../../components';
+import { ImageBackground, TextContainer } from './styles';
 
 const Header = () => {
   return (
@@ -10,20 +10,5 @@ const Header = () => {
     </ImageBackground>
   );
 };
-
-const ImageBackground = styled.ImageBackground.attrs({
-  source: require('./album.png'),
-})`
-  flex: 0.4;
-  opacity: 0.8;
-`;
-
-const TextContainer = styled.View`
-  flex: 1;
-  padding: 0 10px;
-  justify-content: flex-end;
-  align-items: flex-start;
-`;
-
 
 export default Header;
