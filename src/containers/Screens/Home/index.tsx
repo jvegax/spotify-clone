@@ -1,5 +1,5 @@
-import { Text } from '../../components'
-import Header from './Header'
+import { Text } from '../../../components'
+import Header from '../../../components/Home/Header'
 import { Container } from './styles'
 
 const Home = () => 

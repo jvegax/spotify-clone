@@ -1,4 +1,4 @@
-import { Text } from '../../../components';
+import { Text } from '../..';
 import { ImageBackground, TextContainer } from './styles';
 
 const Header = () => {
