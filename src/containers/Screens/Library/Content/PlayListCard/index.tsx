@@ -1,20 +1,16 @@
-import type { FC } from "react"
-import { PlayList } from "../../../../../models/PlayList/mock"
-import { Text } from "../../../../../components"
-import { Image } from 'expo-image';
-import { Info, Container, Button } from "./styles"
+import type { FC } from 'react'
+import { PlayList } from '../../../../../models/PlayList/mock'
+import { Text } from '../../../../../components'
+import { Image } from 'expo-image'
+import { Info, Container, Button } from './styles'
 
 export type Props = {
   playList: PlayList
+  onPressNavigatePlayList: (id: string) => void;
 }
 
-const PlayListCard: FC<Props> = ({ playList }) => {
-  const handleOnPress = () => {
-    // navigate to playlist screen details
-    return null
-  }
-  return (
-    <Button onPress={handleOnPress}>
+const PlayListCard: FC<Props> = ({ playList, onPressNavigatePlayList }) => (
+    <Button onPress={() => onPressNavigatePlayList(playList.id)}>
       <Container>
         <Image
           source={playList.image}
@@ -26,7 +22,6 @@ const PlayListCard: FC<Props> = ({ playList }) => {
         </Info>
       </Container>
     </Button>
-  )
-}
+)
 
 export default PlayListCard

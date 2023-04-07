@@ -1,14 +1,27 @@
+import { FC, memo, useMemo } from 'react'
 import PlayListCard from './PlayListCard'
 import { Container } from './styles'
 import { MOCK_PLAYLISTS } from '../../../../models/PlayList/mock'
 
-const Content = () => {
-  const handleRenderPlayListCard = () => MOCK_PLAYLISTS.map((playList) => <PlayListCard key={playList.id} playList={playList} />)
+type Props = {
+  onPressNavigatePlayList: (id: string) => void;
+}
+
+const Content: FC<Props> = ({ onPressNavigatePlayList }) => {
+  const handleRenderPlayListCard = useMemo(() => {
+    return MOCK_PLAYLISTS.map((playList) =>
+      <PlayListCard
+        key={playList.id}
+        playList={playList}
+        onPressNavigatePlayList={onPressNavigatePlayList}
+      />
+    )
+  }, [onPressNavigatePlayList])
 
   return (
     <Container>
-      {handleRenderPlayListCard()}
+      {handleRenderPlayListCard}
     </Container>
   )
 }
-export default Content
+export default memo(Content)

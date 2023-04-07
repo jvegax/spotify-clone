@@ -7,7 +7,7 @@ const Home = ({ navigation }: any) =>
         <>
             <Header />
             <Container>
-                <Button onPress={() => navigation.navigate('HomeDetails')} title='HomeDetails' />
+                <Button title='HomeDetails' onPress={() => navigation.navigate('HomeDetails')} />
                 <Text size={22} weight={400}>Home</Text>
             </Container>
         </>
