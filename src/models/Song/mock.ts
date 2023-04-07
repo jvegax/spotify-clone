@@ -1,6 +1,6 @@
-import { Chart } from "./types";
+import { Song } from "./types";
 
-export const MOCK_CHART: Chart = {
+export const MOCK_SONG: Song = {
     id: "1",
     type: "MUSIC",
     title: "The Astronaut",

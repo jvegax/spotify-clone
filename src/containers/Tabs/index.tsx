@@ -17,6 +17,7 @@ const TabBarBottom = () => {
               <Ionicons name="home-outline" size={size} color={color} />
             )
           }}
+
         />
         <Tab.Screen
           name="Search"
@@ -28,7 +29,7 @@ const TabBarBottom = () => {
           }}
         />
         <Tab.Screen
-          name="Library"
+          name="Your Library"
           component={Library}
           options={{
             tabBarIcon: ({ color, size }) => (

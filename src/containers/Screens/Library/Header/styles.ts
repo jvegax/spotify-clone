@@ -37,8 +37,9 @@ export const ProfileImage = styled.Image`
 export const RightContainer = styled.View`
     width: 50%;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
+    padding-left: 20px;
     gap: 10px;
 `
 

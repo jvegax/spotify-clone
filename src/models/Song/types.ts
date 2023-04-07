@@ -1,4 +1,4 @@
-export type Chart = {
+export type Song = {
     id: string;
     type: string;
     title: string;

@@ -1,9 +1,12 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { Text } from '../../../components'
+import { Container } from './styles'
 
 const Search = () => {
   return (
-    <Text>Search Screen</Text>
+    <Container>
+      <Text size={22} weight={600}>Search Screen</Text>
+    </Container>
   )
 }
 

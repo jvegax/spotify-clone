@@ -16,7 +16,7 @@ const Header = () => {
               uri: MOCK_IMAGE
             }}
           />
-          <Text size={22} weight={600}>Tu Biblioteca</Text>
+          <Text size={22} weight={600}>Your Library</Text>
         </RightContainer>
         <LeftContainer>
           <AntDesign name="search1" size={24} color="white" />

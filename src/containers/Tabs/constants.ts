@@ -3,8 +3,7 @@ import theme from '../../theme'
 
 export const tabStackScreenOptions: BottomTabNavigationOptions = {
   headerShown: false,
-  tabBarShowLabel: false,
-  tabBarStyle: { backgroundColor: theme.colors.black, borderTopColor: theme.colors.black, height: 60 },
+  tabBarStyle: { backgroundColor: theme.colors.black, borderTopColor: theme.colors.black, height: 70, paddingBottom: 10 },
   tabBarActiveTintColor: theme.colors.white,
   tabBarInactiveTintColor: theme.colors.gray
 }
