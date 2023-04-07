@@ -1,15 +1,14 @@
 import { memo } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Home, Search, Library } from '../Screens';
-import { Ionicons } from '@expo/vector-icons'; // assuming you're using Expo for your project
+import { Ionicons  } from '@expo/vector-icons';
+import { tabStackScreenOptions } from './constants';
 
 const Tab = createBottomTabNavigator();
 
 const TabBarBottom = () => {
   return (
-      <Tab.Navigator
-        screenOptions={{ headerShown: false, tabBarShowLabel: false }}
-      >
+      <Tab.Navigator screenOptions={tabStackScreenOptions}>
         <Tab.Screen 
           name="Home"
           component={Home}

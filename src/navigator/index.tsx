@@ -7,6 +7,7 @@ import {
 } from './constants';
 import type { Props } from './types';
 import Tabs from '../containers/Tabs';
+import { HomeDetails, LibraryDetails, SearchDetails } from '../containers/Modals';
 
 const { Navigator, Group, Screen } = createNativeStackNavigator();
 
@@ -14,7 +15,7 @@ const AppNavigator: FC<Props> = () => (
   <Navigator screenOptions={generalStackScreenOptions}>
     <Screen name="Tabs" component={Tabs} />
 
-    {/* <Group screenOptions={modalStackScreenOptions}>
+    <Group screenOptions={modalStackScreenOptions}>
       <Screen
         name="HomeDetails"
         component={HomeDetails}
@@ -22,7 +23,7 @@ const AppNavigator: FC<Props> = () => (
       <Screen name="SearchDetails" component={SearchDetails} />
 
       <Screen name="LibraryDetails" component={LibraryDetails} />
-    </Group> */}
+    </Group>
   </Navigator>
 );
 

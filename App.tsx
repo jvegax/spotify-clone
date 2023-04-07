@@ -8,7 +8,7 @@ import { NavigationContainer } from '@react-navigation/native';
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
       <SafeAreaProvider>
         <NavigationContainer>
           <Navigator />
