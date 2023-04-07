@@ -1,4 +1,4 @@
-import styled from "styled-components/native";
+import styled from 'styled-components/native'
 
 export const Container = styled.View`
     height: 150px;
@@ -6,7 +6,7 @@ export const Container = styled.View`
     justify-content: center;
     align-items: center;
     background-color: ${({ theme }) => theme.colors.black};
-`;
+`
 
 export const ProfileContainer = styled.View`
     margin-top: 40px;
@@ -16,7 +16,7 @@ export const ProfileContainer = styled.View`
     justify-content: flex-start;
     align-items: center;
     background-color: ${({ theme }) => theme.colors.black};
-`;
+`
 
 export const SearchContainer = styled.View`
     flex: 0.3;
@@ -26,14 +26,14 @@ export const SearchContainer = styled.View`
     align-items: center;
     background-color: ${({ theme }) => theme.colors.black};
     border: 1px solid ${({ theme }) => theme.colors.green};
-`;
+`
 
 export const ProfileImage = styled.Image`
     width: 36px;
     height: 36px;
     border-radius: 50px;
     border: none;
-`;
+`
 
 export const RightContainer = styled.View`
     width: 50%;
@@ -41,7 +41,7 @@ export const RightContainer = styled.View`
     justify-content: flex-end;
     align-items: center;
     gap: 10px;
-`;
+`
 
 export const LeftContainer = styled.View`
     width: 50%;
@@ -50,5 +50,4 @@ export const LeftContainer = styled.View`
     justify-content: flex-end;
     align-items: center;
     gap: 10px;
-`;
-
+`

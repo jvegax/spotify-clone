@@ -1,10 +1,9 @@
 import { Text } from 'react-native'
 
 const Home = () => {
-    return (
+  return (
       <Text>Home Modals</Text>
-    )
-  }
-
+  )
+}
 
 export default Home

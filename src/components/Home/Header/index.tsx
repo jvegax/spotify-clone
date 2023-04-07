@@ -1,5 +1,5 @@
-import { Text } from '../..';
-import { ImageBackground, TextContainer } from './styles';
+import { Text } from '../..'
+import { ImageBackground, TextContainer } from './styles'
 
 const Header = () => {
   return (
@@ -8,7 +8,7 @@ const Header = () => {
         <Text size={36} weight={900}>HELLO WORLD</Text>
       </TextContainer>
     </ImageBackground>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

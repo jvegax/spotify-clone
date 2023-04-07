@@ -3,7 +3,7 @@ import Header from '../../../components/Home/Header'
 import { Container } from './styles'
 import { Button } from 'react-native'
 
-const Home = ({ navigation }: any) => 
+const Home = ({ navigation }: any) =>
         <>
             <Header />
             <Container>
@@ -12,5 +12,4 @@ const Home = ({ navigation }: any) =>
             </Container>
         </>
 
-
-export default Home 
+export default Home

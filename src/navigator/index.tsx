@@ -1,17 +1,15 @@
-import type { FC } from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import {
   modalStackScreenOptions,
-  generalStackScreenOptions,
-} from './constants';
-import type { Props } from './types';
-import Tabs from '../containers/Tabs';
-import { HomeDetails, LibraryDetails, SearchDetails } from '../containers/Modals';
+  generalStackScreenOptions
+} from './constants'
+import Tabs from '../containers/Tabs'
+import { HomeDetails, LibraryDetails, SearchDetails } from '../containers/Modals'
 
-const { Navigator, Group, Screen } = createNativeStackNavigator();
+const { Navigator, Group, Screen } = createNativeStackNavigator()
 
-const AppNavigator: FC<Props> = () => (
+const AppNavigator = () => (
   <Navigator screenOptions={generalStackScreenOptions}>
     <Screen name="Tabs" component={Tabs} />
 
@@ -25,6 +23,6 @@ const AppNavigator: FC<Props> = () => (
       <Screen name="LibraryDetails" component={LibraryDetails} />
     </Group>
   </Navigator>
-);
+)
 
-export default AppNavigator;
+export default AppNavigator

@@ -1,5 +1,5 @@
-import styled from 'styled-components/native';
-import { Props } from './types';
+import styled from 'styled-components/native'
+import { Props } from './types'
 
 export const StyledText = styled.Text<Props>`
     font-weight: ${props => props.weight};

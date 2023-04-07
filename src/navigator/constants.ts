@@ -1,10 +1,10 @@
-import type { NativeStackNavigationOptions } from '@react-navigation/native-stack';
+import type { NativeStackNavigationOptions } from '@react-navigation/native-stack'
 
 export const generalStackScreenOptions: NativeStackNavigationOptions = {
-  headerShown: false,
-};
+  headerShown: false
+}
 
 export const modalStackScreenOptions: NativeStackNavigationOptions = {
   ...generalStackScreenOptions,
-  presentation: 'modal',
-};
+  presentation: 'modal'
+}
