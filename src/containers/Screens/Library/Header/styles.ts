@@ -25,14 +25,13 @@ export const SearchContainer = styled.View`
     justify-content: center;
     align-items: center;
     background-color: ${({ theme }) => theme.colors.black};
-    border: 1px solid ${({ theme }) => theme.colors.green};
+    padding: 0 16px;
 `
 
 export const ProfileImage = styled.Image`
     width: 36px;
     height: 36px;
     border-radius: 50px;
-    border: none;
 `
 
 export const RightContainer = styled.View`
