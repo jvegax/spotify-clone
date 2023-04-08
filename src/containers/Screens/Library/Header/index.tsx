@@ -19,8 +19,8 @@ const Header = () => {
           <Text size={22} weight={600}>Your Library</Text>
         </RightContainer>
         <LeftContainer>
-          <AntDesign name="search1" size={24} color="white" />
-          <AntDesign name="plus" size={26} color="white" />
+          <AntDesign name='search1' size={24} color='white' />
+          <AntDesign name='plus' size={26} color='white' />
         </LeftContainer>
       </ProfileContainer>
       <SearchContainer>

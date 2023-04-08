@@ -1,8 +1,8 @@
-import { Text } from 'react-native'
+import { Text } from '@components/index'
 
 const Home = () => {
   return (
-      <Text>Home Modals</Text>
+    <Text size={22} weight={400}>Home Modals</Text>
   )
 }
 

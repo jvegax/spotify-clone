@@ -11,10 +11,10 @@ const { Navigator, Group, Screen } = createNativeStackNavigator()
 
 const AppNavigator = () => (
   <Navigator screenOptions={generalStackScreenOptions}>
-    <Screen name="Tabs" component={Tabs} />
+    <Screen name='Tabs' component={Tabs} />
 
     <Group screenOptions={modalStackScreenOptions}>
-      <Screen name="PlayListDetails" component={PlayListDetails} />
+      <Screen name='PlayListDetails' component={PlayListDetails} />
     </Group>
   </Navigator>
 )

@@ -9,15 +9,15 @@ const MOCK_SEARCH_LIST = [
   SearchField.Playlist,
   SearchField.Song,
   SearchField.Podcast,
-  SearchField.Audiobook,
+  SearchField.Audiobook
 ]
 
 const SearchList = () => {
   const handleRenderSearchCards = () => MOCK_SEARCH_LIST.map((item, index) => <SearchCard key={index} type={item} />)
-  
+
   return (
     <Container>
-        {handleRenderSearchCards()}
+      {handleRenderSearchCards()}
     </Container>
 
   )

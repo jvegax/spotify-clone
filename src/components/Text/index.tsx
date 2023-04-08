@@ -4,9 +4,9 @@ import { StyledText } from './styles'
 
 const Text: FC<Props> = ({ children, weight, size }) => {
   return (
-        <StyledText weight={weight} size={size}>
-            {children}
-        </StyledText>
+    <StyledText weight={weight} size={size}>
+      {children}
+    </StyledText>
   )
 }
 

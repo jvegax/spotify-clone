@@ -3,8 +3,8 @@ import PlayListCard from './PlayListCard'
 import { Container } from './styles'
 import { MOCK_PLAYLISTS } from '../../../../models/PlayList/mock'
 
-type Props = {
-  onPressNavigatePlayList: (id: string) => void;
+interface Props {
+  onPressNavigatePlayList: (id: string) => void
 }
 
 const Content: FC<Props> = ({ onPressNavigatePlayList }) => {

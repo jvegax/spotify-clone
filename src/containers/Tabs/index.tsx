@@ -8,36 +8,35 @@ const Tab = createBottomTabNavigator()
 
 const TabBarBottom = () => {
   return (
-      <Tab.Navigator screenOptions={tabStackScreenOptions}>
-        <Tab.Screen
-          name="Home"
-          component={Home}
-          options={{
-            tabBarIcon: ({ color, size }) => (
-              <Ionicons name="home-outline" size={size} color={color} />
-            )
-          }}
-
-        />
-        <Tab.Screen
-          name="Search"
-          component={Search}
-          options={{
-            tabBarIcon: ({ color, size }) => (
-              <Ionicons name="search-outline" size={size} color={color} />
-            )
-          }}
-        />
-        <Tab.Screen
-          name="Your Library"
-          component={Library}
-          options={{
-            tabBarIcon: ({ color, size }) => (
-              <Ionicons name="book-outline" size={size} color={color} />
-            )
-          }}
-        />
-      </Tab.Navigator>
+    <Tab.Navigator screenOptions={tabStackScreenOptions}>
+      <Tab.Screen
+        name='Home'
+        component={Home}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name='home-outline' size={size} color={color} />
+          )
+        }}
+      />
+      <Tab.Screen
+        name='Search'
+        component={Search}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name='search-outline' size={size} color={color} />
+          )
+        }}
+      />
+      <Tab.Screen
+        name='Your Library'
+        component={Library}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name='book-outline' size={size} color={color} />
+          )
+        }}
+      />
+    </Tab.Navigator>
   )
 }
 

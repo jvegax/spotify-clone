@@ -1,4 +1,6 @@
-import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+/* eslint-disable */
+import { ParamListBase } from '@react-navigation/native'
+import type { NativeStackScreenProps } from '@react-navigation/native-stack'
 
 declare global {
   namespace ReactNavigation {
@@ -6,25 +8,23 @@ declare global {
   }
 }
 
-type DetailScreenProps = {
-  id: string;
-};
+interface DetailScreenProps {
+  id: string
+}
 
-export type ScreensParams = {
-  Home: undefined;
-
-  Search: undefined;
-
-  Library: undefined;
-  PlayListDetails: DetailScreenProps;
-};
+export interface ScreensParams extends ParamListBase {
+  Home: undefined
+  Search: undefined
+  Library: undefined
+  PlayListDetails: DetailScreenProps
+}
 
 export type PlayListDetailsRouteProps = NativeStackScreenProps<
-  ScreensParams,
-  'PlayListDetails'
->;
+ScreensParams,
+'PlayListDetails'
+>
 
 export type MainStackScreenProps<ScreenName extends keyof ScreensParams> =
-  NativeStackScreenProps<ScreensParams, ScreenName>;
+  NativeStackScreenProps<ScreensParams, ScreenName>
 
-export type Props = {};
+export interface Props {}

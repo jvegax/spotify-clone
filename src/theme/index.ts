@@ -24,9 +24,9 @@ const theme = {
   device
 }
 
-export type Theme = typeof theme;
+export type Theme = typeof theme
 
-export default theme as Theme
+export default theme
 
 declare module 'styled-components' {
   export interface DefaultTheme extends Theme {}

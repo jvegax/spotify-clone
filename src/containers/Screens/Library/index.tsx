@@ -5,7 +5,7 @@ import Header from './Header'
 import { Container } from './styles'
 import { useNavigation } from '@react-navigation/native'
 
-type Props = MainStackScreenProps<'Library'> & {};
+type Props = MainStackScreenProps<'Library'> & {}
 
 const Library: FC<Props> = () => {
   const { navigate } = useNavigation()
@@ -20,7 +20,7 @@ const Library: FC<Props> = () => {
   return (
     <Container>
       <Header />
-      <Content onPressNavigatePlayList={onPressNavigatePlayList}/>
+      <Content onPressNavigatePlayList={onPressNavigatePlayList} />
     </Container>
   )
 }

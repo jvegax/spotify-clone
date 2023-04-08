@@ -5,6 +5,6 @@ export const Container = styled.ScrollView.attrs({
     flexGrow: 1,
     paddingTop: 20,
     justifyContent: 'flex-start',
-    alignItems: 'center',
+    alignItems: 'center'
   }
 })``
