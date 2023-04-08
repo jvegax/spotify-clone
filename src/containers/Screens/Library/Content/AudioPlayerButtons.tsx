@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-misused-promises */
 import React, { useEffect, useState } from 'react'
-import { MOCK_SONG } from '../../../../models/Song/mock'
+
 import { Audio } from 'expo-av'
 import { TouchableOpacity } from 'react-native'
 import theme from '../../../../theme'
-import { Text } from '@components/index'
+import { Text } from '../../../../components'
 
 const AudioPlayerButtons = () => {
   const [sound, setSound] = useState<Audio.Sound | null>(null)
@@ -22,7 +22,7 @@ const AudioPlayerButtons = () => {
   useEffect(() => {
     async function loadAudio () {
       const { sound } = await Audio.Sound.createAsync({
-        uri: MOCK_SONG.player.uri
+        uri: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/bc/5c/5c/bc5c5ca1-0aa1-457d-65ce-f0f56f8a8245/mzaf_12809811648741532519.plus.aac.ep.m4a'
       })
       setSound(sound)
     }

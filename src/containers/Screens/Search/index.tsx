@@ -1,11 +1,11 @@
 import React from 'react'
-import { Text } from '../../../components'
 import { Container } from './styles'
+import { Text } from '../../../components'
 
 const Search = () => {
   return (
     <Container>
-      <Text size={22} weight={600}>Search Screen</Text>
+      <Text size={22} weight={400}>Search</Text>
     </Container>
   )
 }

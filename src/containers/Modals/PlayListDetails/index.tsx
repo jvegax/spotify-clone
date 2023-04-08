@@ -1,14 +1,12 @@
-import { useNavigation, useRoute } from '@react-navigation/native'
-import type { PlayListDetailsRouteProps as Props } from '../../../navigator/types'
-import { Container, GoBackButton, ImageBackground, Title } from './styles'
-import { Ionicons } from '@expo/vector-icons'
+import { useNavigation } from '@react-navigation/native'
+import { Container, GoBackButton, ImageBackground, SpotifyContainer, Title } from './styles'
+import { Ionicons, Entypo } from '@expo/vector-icons'
 import SongList from './SongList'
+import IconSection from './IconSection'
+import { Text } from '../../../components'
 
 const PlayListDetails = () => {
   const { goBack } = useNavigation()
-  const { params } = useRoute<Props['route']>()
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { id } = params
 
   return (
     <Container>
@@ -17,6 +15,10 @@ const PlayListDetails = () => {
       </GoBackButton>
       <Title>PEGAO</Title>
       <ImageBackground />
+      <SpotifyContainer>
+        <Entypo name='spotify' size={24} color='green' /><Text size={14} weight={600}>Spotify</Text>
+      </SpotifyContainer>
+      <IconSection />
       <SongList />
     </Container>
   )

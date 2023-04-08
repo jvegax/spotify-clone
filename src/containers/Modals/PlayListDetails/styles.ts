@@ -9,6 +9,17 @@ export const Container = styled.View`
   align-items: center;
 `
 
+export const SpotifyContainer = styled.View`
+  margin-top: 18px;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width:  100%;
+  height: 26px;
+  padding-left: 18px;
+  gap: 8px;
+`
+
 export const ImageBackground = styled.ImageBackground.attrs({
   source: MOCK_IMAGE
 })`
