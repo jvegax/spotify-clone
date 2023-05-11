@@ -4,6 +4,7 @@ import Content from './Content'
 import Header from './Header'
 import { Container } from './styles'
 import { useNavigation } from '@react-navigation/native'
+import { CurrentSongCard } from '../../../components/CurrentSong'
 
 type Props = MainStackScreenProps<'Library'> & {}
 
@@ -20,6 +21,7 @@ const Library: FC<Props> = () => {
   return (
     <Container>
       <Header />
+      <CurrentSongCard />
       <Content onPressNavigatePlayList={onPressNavigatePlayList} />
     </Container>
   )

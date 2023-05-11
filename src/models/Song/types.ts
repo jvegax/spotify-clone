@@ -15,7 +15,7 @@ export const normalizeSong = (song: any): Song => {
   return {
     id: song.key,
     type: song.type ?? 'Song',
-    title: song.title ?? '',
+    title: song.title ?? 'Unknown',
     image: song.share.image ?? DEFAULT_IMG,
     author: song.artists[0].alias ?? 'Unknown',
     uri: song.hub.actions[1].uri ?? DEFAULT_URI

@@ -17,7 +17,7 @@ const useSongs = () => {
         method: 'GET',
         headers: {
           'x-rapidapi-host': 'shazam-core.p.rapidapi.com',
-          'x-rapidapi-key': 'b1902d28e9msh9cf4e4e7699e1b0p17d643jsnceeafe5e1780'
+          'x-rapidapi-key': 'b1902d28e9msh9cf4e4e7699e1b0p17d643jsnceeafe5e1780' // You can try
         }
       })
 

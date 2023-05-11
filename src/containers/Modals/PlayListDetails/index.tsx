@@ -4,6 +4,7 @@ import { Ionicons, Entypo } from '@expo/vector-icons'
 import SongList from './SongList'
 import IconSection from './IconSection'
 import { Text } from '../../../components'
+import { CurrentSongCard } from '../../../components/CurrentSong'
 
 const PlayListDetails = () => {
   const { goBack } = useNavigation()
@@ -20,6 +21,7 @@ const PlayListDetails = () => {
       </SpotifyContainer>
       <IconSection />
       <SongList />
+      <CurrentSongCard />
     </Container>
   )
 }
