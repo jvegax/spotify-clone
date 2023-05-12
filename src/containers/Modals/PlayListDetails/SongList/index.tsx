@@ -1,14 +1,13 @@
+import { MOCK_SONGS_NORMALIZED } from '../../../../models/Song/mock'
 import SongCard from './SongCard'
 import { Container } from './styles'
-import { MOCK_SONGS } from '../../../../zustand/constants'
 
 const SongList = () => {
   const handleRenderSongCards = () => {
-    return MOCK_SONGS.map((song: any) => ( // TODO: remove any
+    return MOCK_SONGS_NORMALIZED.map((song) => (
       <SongCard
-        key={song.key}
+        key={song.id}
         song={song}
-        playAudio={() => {}}
       />
     ))
   }

@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components/native'
 import Text from '../Text'
-// import { MOCK_SONGS } from '../../zustand/constants'
-import useTrackPlayer from '../../zustand/useStore'
+import { useTrackContext } from '../../context/useTrackPlayer'
+
 export const Container = styled.View`
   position: absolute;
   bottom: 72px;
@@ -18,8 +18,7 @@ export const Container = styled.View`
 `
 
 const CurrentSong = () => {
-  const { currentSong } = useTrackPlayer()
-  // const song = MOCK_SONGS[0]
+  const { currentSong } = useTrackContext()
   return (
     <Container>
       <Text weight={300} size={16}>{currentSong?.title}</Text>
