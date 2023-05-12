@@ -11,12 +11,12 @@ const SongCard: FC<Props> = ({ playAudio, song }) => {
     <Button onPress={playAudio}>
       <Container>
         <Image
-          source={{ uri: song.share.image }}
+          source={{ uri: song.image }}
           style={{ width: 65, height: 65 }}
         />
         <Info>
           <Text size={16} weight={600}>{song.title.slice(0, 25)}</Text>
-          <Text size={12} weight={300}>{song.type} - {song.subtitle.slice(0, 24)}</Text>
+          <Text size={12} weight={300}>{song.type} - {song.title.slice(0, 24)}</Text>
         </Info>
         <MaterialCommunityIcons
           name='dots-vertical' size={22} color='gray' style={{

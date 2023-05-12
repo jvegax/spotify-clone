@@ -1,11 +1,11 @@
 import React from 'react'
 import { Container } from './styles'
-import { Text } from '../../../components'
+import AudioPlayerButtons from '../../../components/Player/AudioPlayerButtons'
 
 const Search = () => {
   return (
     <Container>
-      <Text size={22} weight={400}>Search</Text>
+      <AudioPlayerButtons />
     </Container>
   )
 }

@@ -1,5 +1,6 @@
+import { Song } from '../../../../../models/Song/types'
 
 export interface Props {
-  song: any // TODO: remove any replace with Song
-  playAudio: () => Promise<void>
+  song: Song
+  playAudio: () => void // TODO: type correctly
 }
