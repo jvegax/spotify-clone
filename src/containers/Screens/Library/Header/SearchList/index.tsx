@@ -1,4 +1,4 @@
-import React from 'react'
+import { useCallback, memo } from 'react'
 import SearchCard from './SearchCard'
 import { Container } from './styled'
 import { SearchField } from './SearchCard/types'
@@ -13,7 +13,10 @@ const MOCK_SEARCH_LIST = [
 ]
 
 const SearchList = () => {
-  const handleRenderSearchCards = () => MOCK_SEARCH_LIST.map((item, index) => <SearchCard key={index} type={item} />)
+  const handleRenderSearchCards = useCallback(() => {
+    return MOCK_SEARCH_LIST.map((item, index) => <SearchCard key={index} type={item} />
+    )
+  }, [])
 
   return (
     <Container>
@@ -23,4 +26,4 @@ const SearchList = () => {
   )
 }
 
-export default SearchList
+export default memo(SearchList)

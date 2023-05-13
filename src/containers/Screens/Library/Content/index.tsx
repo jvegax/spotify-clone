@@ -1,4 +1,4 @@
-import { FC, memo, useMemo } from 'react'
+import { FC, memo, useCallback } from 'react'
 import PlayListCard from './PlayListCard'
 import { Container } from './styles'
 import { MOCK_PLAYLISTS } from '../../../../models/PlayList/mock'
@@ -8,7 +8,7 @@ interface Props {
 }
 
 const Content: FC<Props> = ({ onPressNavigatePlayList }) => {
-  const handleRenderPlayListCard = useMemo(() => {
+  const handleRenderPlayListCard = useCallback(() => {
     return MOCK_PLAYLISTS.map((playList) =>
       <PlayListCard
         key={playList.id}
@@ -20,7 +20,7 @@ const Content: FC<Props> = ({ onPressNavigatePlayList }) => {
 
   return (
     <Container>
-      {handleRenderPlayListCard}
+      {handleRenderPlayListCard()}
     </Container>
   )
 }

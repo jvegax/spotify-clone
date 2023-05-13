@@ -1,4 +1,5 @@
-import { FC, useCallback } from 'react'
+import { useCallback, memo } from 'react'
+import type { FC } from 'react'
 import { MainStackScreenProps } from '../../../navigator/types'
 import Content from './Content'
 import Header from './Header'
@@ -25,4 +26,4 @@ const Library: FC<Props> = () => {
   )
 }
 
-export default Library
+export default memo(Library)

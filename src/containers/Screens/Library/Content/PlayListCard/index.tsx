@@ -1,4 +1,5 @@
 import type { FC } from 'react'
+import { memo } from 'react'
 import { PlayList } from '../../../../../models/PlayList/mock'
 import { Text } from '../../../../../components'
 import { Image } from 'expo-image'
@@ -24,4 +25,4 @@ const PlayListCard: FC<Props> = ({ playList, onPressNavigatePlayList }) => (
   </Button>
 )
 
-export default PlayListCard
+export default memo(PlayListCard)

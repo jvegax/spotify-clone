@@ -14,6 +14,7 @@ const SongCard: FC<Props> = ({ song }) => {
     if (song === null) return
     handlePressNewSong(song)
   }
+
   return (
     <Button onPress={onPress}>
       <Container>

@@ -1,10 +1,13 @@
-import { MOCK_SONGS_NORMALIZED } from '../../../../models/Song/mock'
+import { Song } from '../../../../models/Song/types'
 import SongCard from './SongCard'
 import { Container } from './styles'
-
-const SongList = () => {
+import type { FC } from 'react'
+interface Props {
+  songs: Song[]
+}
+const SongList: FC<Props> = ({ songs }) => {
   const handleRenderSongCards = () => {
-    return MOCK_SONGS_NORMALIZED.map((song) => (
+    return songs.map((song) => (
       <SongCard
         key={song.id}
         song={song}

@@ -1,13 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Text from '../Text'
 import { useTrackContext } from '../../context/useTrackPlayer'
 import { Center, Container, Left, Right, SongImage } from './styles'
-import { MaterialIcons } from '@expo/vector-icons'
+import { MaterialIcons, FontAwesome } from '@expo/vector-icons'
 import { TouchableOpacity } from 'react-native'
 
 const TrackPlayer = () => {
-  const { currentSong } = useTrackContext()
+  const [paused, setPaused] = useState(false)
+  const { currentSong, pauseCurrent, playCurrent } = useTrackContext()
   const normalizeTitle = currentSong?.title.slice(0, 25)
+
+  const renderActionButtons = () => {
+    if (paused) {
+      return (
+        <TouchableOpacity onPress={() => {
+          setPaused(false)
+          playCurrent()
+        }}
+        >
+          <FontAwesome name='play' size={26} color='white' />
+        </TouchableOpacity>
+      )
+    }
+
+    return (
+      <TouchableOpacity onPress={() => {
+        setPaused(true)
+        pauseCurrent()
+      }}
+      >
+        <MaterialIcons name='pause' size={34} color='white' />
+      </TouchableOpacity>
+    )
+  }
+
+  if (currentSong === null) return null
+
   return (
     <Container>
       <Left>
@@ -23,11 +51,9 @@ const TrackPlayer = () => {
       </Center>
       <Right>
         <TouchableOpacity>
-          <MaterialIcons name='favorite' size={32} color='white' />
+          <MaterialIcons name='favorite' size={28} color='white' />
         </TouchableOpacity>
-        <TouchableOpacity>
-          <MaterialIcons name='pause' size={38} color='white' />
-        </TouchableOpacity>
+        {renderActionButtons()}
       </Right>
     </Container>
   )

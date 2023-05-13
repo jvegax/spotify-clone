@@ -1,3 +1,5 @@
+import { normalizeSong } from './types'
+
 export interface Song {
   id: string
   type: string
@@ -4027,3 +4029,5 @@ export const MOCK_SONGS_FROM_API = [
     properties: {}
   }
 ]
+
+export const NORMALIZED_API_SONGS: Song[] = MOCK_SONGS_FROM_API.map(song => normalizeSong(song))

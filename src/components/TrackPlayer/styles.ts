@@ -60,4 +60,5 @@ export const Right = styled.View`
   width: 25%;
   height: 100%;
 
+  padding-right: 10px;
 `

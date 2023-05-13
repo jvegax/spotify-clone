@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import type { FC } from 'react'
 import TrackContext from './TrackPlayerContext'
 import { TrackProviderProps } from './types'
@@ -18,14 +18,18 @@ const TrackProvider: FC<TrackProviderProps> = ({ children }) => {
   const [sound, setSound] = useState<Audio.Sound | null>(null)
   const soundRef = useRef<Audio.Sound>()
 
-  const pauseCurrent = async () => {
-    if (sound) await sound.pauseAsync()
+  const pauseCurrent = () => {
+    if (sound) sound.pauseAsync()
   }
 
-  const handlePressNewSong = async (newSong: Song) => {
+  const playCurrent = () => {
+    if (sound) sound.playAsync()
+  }
+
+  const handlePressNewSong = useCallback(async (newSong: Song) => {
     if (currentSong?.id === newSong.id) return
 
-    await pauseCurrent()
+    pauseCurrent()
 
     const { sound: newSound } = await Audio.Sound.createAsync(
       { uri: newSong.uri },
@@ -35,7 +39,7 @@ const TrackProvider: FC<TrackProviderProps> = ({ children }) => {
     setSound(newSound)
     setCurrentSong(newSong)
     soundRef.current = newSound
-  }
+  }, [currentSong])
 
   useEffect(() => {
     return () => {
@@ -44,7 +48,10 @@ const TrackProvider: FC<TrackProviderProps> = ({ children }) => {
   }, [])
 
   const value = {
+    sound,
     currentSong,
+    playCurrent,
+    pauseCurrent,
     handlePressNewSong
   }
 

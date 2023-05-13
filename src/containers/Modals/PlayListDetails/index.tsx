@@ -4,6 +4,7 @@ import { Ionicons, Entypo } from '@expo/vector-icons'
 import SongList from './SongList'
 import IconSection from './IconSection'
 import { Text } from '../../../components'
+import { NORMALIZED_API_SONGS } from '../../../models/Song/mock'
 
 const PlayListDetails = () => {
   const { goBack } = useNavigation()
@@ -19,7 +20,7 @@ const PlayListDetails = () => {
         <Entypo name='spotify' size={24} color='green' /><Text size={14} weight={600}>Spotify</Text>
       </SpotifyContainer>
       <IconSection />
-      <SongList />
+      <SongList songs={NORMALIZED_API_SONGS} />
     </Container>
   )
 }
