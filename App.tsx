@@ -5,8 +5,8 @@ import { NavigationContainer } from '@react-navigation/native'
 
 import theme from './src/theme'
 import Navigator from './src/navigator'
-import CurrentSong from './src/components/CurrentSong'
 import TrackProvider from './src/context/TrackProvider'
+import TrackPlayer from './src/components/TrackPlayer'
 
 export default function App () {
   return (
@@ -14,7 +14,7 @@ export default function App () {
       <ThemeProvider theme={theme}>
         <StatusBar style='light' />
         <SafeAreaProvider>
-          <CurrentSong />
+          <TrackPlayer />
           <NavigationContainer>
             <Navigator />
           </NavigationContainer>
