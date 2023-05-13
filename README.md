@@ -4,4 +4,4 @@ Spotify clone w/ React Native ⚛️
 
 ## Volume 🔊
 
-https://user-images.githubusercontent.com/49287932/230743051-1b9694bc-5eed-40e9-b12d-84100b4f1527.mp4
+https://github.com/jvegax/spotify-clone/assets/49287932/4c974c30-82cc-47a7-a567-def62859a151
