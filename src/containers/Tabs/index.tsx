@@ -28,7 +28,7 @@ const TabBarBottom = () => {
         }}
       />
       <Tab.Screen
-        name='Your Library'
+        name='Library'
         component={Library}
         options={{
           tabBarIcon: ({ color, size }) => (

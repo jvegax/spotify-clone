@@ -1,18 +1,20 @@
-import { Image } from 'expo-image'
 import type { FC } from 'react'
+import { Image } from 'expo-image'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { Text } from '../../../../../components'
 import { Button, Container, Info } from './styles'
 import { Song } from '../../../../../models/Song/types'
-import { useTrackContext } from '../../../../../context/useTrackPlayer'
+import { useAppDispatch } from '../../../../../redux/hooks'
+import { handlePlayNewSong } from '../../../../../redux/slices/trackPlayer'
 interface Props {
   song: Song | null
 }
 const SongCard: FC<Props> = ({ song }) => {
-  const { handlePressNewSong } = useTrackContext()
+  const dispatch = useAppDispatch()
+
   const onPress = () => {
     if (song === null) return
-    handlePressNewSong(song)
+    dispatch(handlePlayNewSong(song))
   }
 
   return (

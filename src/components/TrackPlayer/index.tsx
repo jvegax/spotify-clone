@@ -1,13 +1,16 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Text from '../Text'
-import { useTrackContext } from '../../context/useTrackPlayer'
 import { Center, Container, Left, Right, SongImage } from './styles'
 import { MaterialIcons, FontAwesome } from '@expo/vector-icons'
 import { TouchableOpacity } from 'react-native'
+import { useAppDispatch, useAppSelector } from '../../redux/hooks'
+import { pauseCurrentSong, playCurrentSong } from '../../redux/slices/trackPlayer'
 
 const TrackPlayer = () => {
   const [paused, setPaused] = useState(false)
-  const { currentSong, pauseCurrent, playCurrent } = useTrackContext()
+  const currentSong = useAppSelector((state) => state.trackPlayer.currentSong)
+  const dispatch = useAppDispatch()
+
   const normalizeTitle = currentSong?.title.slice(0, 25)
 
   const renderActionButtons = () => {
@@ -15,7 +18,7 @@ const TrackPlayer = () => {
       return (
         <TouchableOpacity onPress={() => {
           setPaused(false)
-          playCurrent()
+          dispatch(playCurrentSong())
         }}
         >
           <FontAwesome name='play' size={26} color='white' />
@@ -26,7 +29,7 @@ const TrackPlayer = () => {
     return (
       <TouchableOpacity onPress={() => {
         setPaused(true)
-        pauseCurrent()
+        dispatch(pauseCurrentSong())
       }}
       >
         <MaterialIcons name='pause' size={34} color='white' />

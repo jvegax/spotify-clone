@@ -1,16 +1,20 @@
 import { StatusBar } from 'expo-status-bar'
-import { ThemeProvider } from 'styled-components'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { NavigationContainer } from '@react-navigation/native'
+import { ThemeProvider } from 'styled-components'
+import { Provider } from 'react-redux'
 
 import theme from './src/theme'
 import Navigator from './src/navigator'
-import TrackProvider from './src/context/TrackProvider'
 import TrackPlayer from './src/components/TrackPlayer'
+import store from './src/redux/store'
+import { Audio } from 'expo-av'
+
+Audio.setAudioModeAsync({})
 
 export default function App () {
   return (
-    <TrackProvider>
+    <Provider store={store}>
       <ThemeProvider theme={theme}>
         <StatusBar style='light' />
         <SafeAreaProvider>
@@ -20,6 +24,6 @@ export default function App () {
           </NavigationContainer>
         </SafeAreaProvider>
       </ThemeProvider>
-    </TrackProvider>
+    </Provider>
   )
 }
