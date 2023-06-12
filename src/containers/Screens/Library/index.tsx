@@ -1,14 +1,12 @@
-import { useCallback, memo } from 'react'
-import type { FC } from 'react'
-import { MainStackScreenProps } from '../../../navigator/types'
+import { useCallback } from 'react'
 import Content from './Content'
 import Header from './Header'
 import { Container } from './styles'
 import { useNavigation } from '@react-navigation/native'
 
-type Props = MainStackScreenProps<'Library'> & {}
+// type Props = MainStackScreenProps<'Library'> & {}
 
-const Library: FC<Props> = () => {
+const Library = () => {
   const { navigate } = useNavigation()
 
   const onPressNavigatePlayList = useCallback(
@@ -26,4 +24,4 @@ const Library: FC<Props> = () => {
   )
 }
 
-export default memo(Library)
+export default Library
